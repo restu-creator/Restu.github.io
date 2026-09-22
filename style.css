@@ -1,0 +1,609 @@
+/* =====================================================
+   TOKEN — palet & tipografi
+   Tema: Monochrome Neo-Brutalism x Minimalist UI (hitam-putih)
+   ===================================================== */
+:root {
+  --ink: #000000;
+  --ink-soft: #121212;
+  --ink-line: rgba(255, 255, 255, 0.22);
+
+  --paper: #ffffff;
+  --paper-soft: #f0f0f0;
+
+  --gold: #000000;        /* aksen utama di area terang */
+  --gold-soft: #ffffff;   /* aksen di area gelap (navbar brand) */
+  --gold-deep: #000000;   /* aksen deep di area terang */
+
+  --text-light: #ffffff;
+  --text-light-dim: rgba(255, 255, 255, 0.72);
+  --text-dark: #0a0a0a;
+  --text-dark-dim: rgba(10, 10, 10, 0.65);
+
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background-color: var(--paper);
+}
+
+h1, h2, h3, .navbar-brand {
+  font-family: var(--font-display);
+}
+
+a { text-decoration: none; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+/* =====================================================
+   NAVBAR (selalu di atas latar gelap/hero)
+   ===================================================== */
+.site-nav {
+  padding: 1.1rem 0;
+  background: transparent;
+  transition: background-color 0.35s ease, padding 0.35s ease, box-shadow 0.35s ease;
+}
+
+.site-nav .navbar-brand {
+  color: var(--gold-soft);
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .nav-link {
+  color: var(--text-light-dim);
+  font-weight: 500;
+  margin-left: 0.35rem;
+  padding: 0.4rem 0.9rem !important;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.site-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.9rem;
+  right: 0.9rem;
+  bottom: 0.15rem;
+  height: 2px;
+  background: #ffffff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active {
+  color: var(--text-light);
+}
+
+.site-nav .nav-link:hover::after,
+.site-nav .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.site-nav .navbar-toggler {
+  border-color: var(--ink-line);
+}
+
+.site-nav .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.site-nav-scrolled {
+  background-color: rgba(0, 0, 0, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  padding: 0.7rem 0;
+}
+
+@media (max-width: 991.98px) {
+  .site-nav .navbar-collapse {
+    background: var(--ink-soft);
+    border: 1px solid var(--ink-line);
+    border-radius: var(--radius);
+    margin-top: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* =====================================================
+   HERO
+   ===================================================== */
+.hero {
+  position: relative;
+  background: var(--ink);
+  color: var(--text-light);
+  padding: 9rem 1rem 0;
+  overflow: hidden;
+}
+
+.hero-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  padding-bottom: 6rem;
+}
+
+.avatar-frame {
+  width: 148px;
+  height: 148px;
+  margin: 0 auto 1.75rem;
+  padding: 5px;
+  background: #ffffff;
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  background-color: var(--ink-soft);
+  display: block;
+}
+
+.hero-name {
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.85rem;
+  line-height: 1.15;
+}
+
+.hero-tagline {
+  display: inline-block;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-light-dim);
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid #ffffff;
+  margin: 0;
+}
+
+.hero-divider {
+  display: block;
+  width: calc(100% + 2rem);
+  height: 110px;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+@media (min-width: 768px) {
+  .hero-divider { height: 150px; }
+}
+
+/* =====================================================
+   SECTION UMUM
+   ===================================================== */
+section { scroll-margin-top: 4.5rem; }
+
+.about-section,
+.projek-section,
+.contact-section { background-color: var(--paper); }
+
+.karya-section { background-color: var(--ink); }
+
+.about-section { padding: 4.5rem 0 6rem; }
+.projek-section,
+.karya-section,
+.contact-section { padding: 6rem 0; }
+
+.section-title {
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--text-dark);
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 4px;
+  margin: 0.6rem auto 0;
+  background: #000000;
+  border-radius: 2px;
+}
+
+.section-title-light { color: var(--text-light); }
+
+.section-title-light::after { background: #ffffff; }
+
+.section-subtitle {
+  color: var(--text-dark-dim);
+  margin-bottom: 0;
+}
+
+.section-subtitle-light { color: var(--text-light-dim); }
+
+/* =====================================================
+   ABOUT
+   ===================================================== */
+.about-card {
+  display: flex;
+  flex-wrap: wrap;
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 9px 9px 0 #000000;
+}
+
+.about-card-text {
+  flex: 1 1 55%;
+  min-width: 260px;
+  padding: 2.25rem 2.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.about-quote-mark {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  color: #000000;
+  line-height: 0.6;
+  vertical-align: -0.6rem;
+  margin-right: 0.2rem;
+  flex-shrink: 0;
+}
+
+.about-text {
+  display: inline;
+  font-size: 1.12rem;
+  line-height: 1.7;
+  color: var(--text-dark-dim);
+  margin: 0;
+}
+
+.about-card-facts {
+  flex: 1 1 45%;
+  min-width: 240px;
+  background: var(--paper-soft);
+  border-left: 2px solid #000000;
+  padding: 1.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.about-fact {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.about-fact i {
+  font-size: 1.3rem;
+  color: var(--gold-deep);
+  line-height: 1;
+  margin-top: 0.15rem;
+}
+
+.about-fact > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-fact-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dark-dim);
+}
+
+.about-fact-value {
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 0.98rem;
+}
+
+@media (max-width: 575.98px) {
+  .about-card-facts {
+    border-left: none;
+    border-top: 2px solid #000000;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =====================================================
+   KARYA — kartu di atas latar hitam
+   ===================================================== */
+.trophy-card {
+  position: relative;
+  background: var(--ink-soft);
+  border: 2px solid #ffffff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 7px 7px 0 #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trophy-card:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 3px 3px 0 #ffffff;
+}
+
+.trophy-badge {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 50%;
+  font-size: 0.95rem;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.trophy-card-media {
+  aspect-ratio: 4 / 3;
+  background: #1a1a1a;
+  border-bottom: 2px solid #ffffff;
+}
+
+.trophy-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.trophy-card-body {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.trophy-card-text {
+  margin: 0;
+  color: var(--text-light-dim);
+  font-weight: 500;
+}
+
+/* =====================================================
+   PROJEK — kartu di atas latar putih
+   ===================================================== */
+.projek-card {
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 7px 7px 0 #000000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.projek-card:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 3px 3px 0 #000000;
+}
+
+.projek-card-media {
+  aspect-ratio: 4 / 3;
+  background: var(--paper-soft);
+  border-bottom: 2px solid #000000;
+}
+
+.projek-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.projek-card-body {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.projek-card-text {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.projek-featured {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 10px 10px 0 #000000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.projek-featured:hover {
+  transform: translate(5px, 5px);
+  box-shadow: 5px 5px 0 #000000;
+}
+
+.projek-featured-media {
+  position: relative;
+  flex: 1 1 46%;
+  min-width: 280px;
+  background: var(--paper-soft);
+  border-bottom: 2px solid #000000;
+}
+
+.projek-featured-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.projek-featured-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: #000000;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+}
+
+.projek-featured-body {
+  flex: 1 1 54%;
+  min-width: 280px;
+  padding: 2.25rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 2px solid #000000;
+}
+
+.projek-featured-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dark-dim);
+  margin-bottom: 0.5rem;
+}
+
+.projek-featured-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+}
+
+.projek-featured-desc {
+  color: var(--text-dark-dim);
+  margin-bottom: 1.25rem;
+}
+
+.projek-featured-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem 1rem;
+}
+
+.projek-featured-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--text-dark);
+}
+
+.projek-featured-list i {
+  color: var(--gold-deep);
+  font-size: 1rem;
+}
+
+@media (max-width: 575.98px) {
+  .projek-featured-body { border-left: none; border-top: 2px solid #000000; }
+  .projek-featured-list { grid-template-columns: 1fr; }
+}
+
+/* =====================================================
+   CONTACT
+   ===================================================== */
+.contact-section { background-color: var(--ink); }
+
+.contact-card {
+  background: var(--paper);
+  border: 2px solid #ffffff;
+  border-radius: var(--radius);
+  padding: 2.25rem 2rem;
+  box-shadow: 8px 8px 0 #ffffff;
+}
+
+.contact-card .form-label {
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.4rem;
+}
+
+.field-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.field-wrap i {
+  position: absolute;
+  left: 0.9rem;
+  color: #000000;
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.field-wrap-textarea i { align-self: flex-start; margin-top: 0.75rem; }
+
+.contact-card .form-control {
+  border: 1.5px solid #000000;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.65rem 0.9rem 0.65rem 2.4rem;
+}
+
+.contact-card .form-control:focus {
+  border-color: #000000;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.18);
+}
+
+.btn-gold {
+  background: #000000;
+  border: 2px solid #000000;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-gold:hover {
+  background: #ffffff;
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   MOTION
+   ===================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .trophy-card,
+  .projek-card,
+  .btn-gold,
+  .site-nav,
+  .site-nav .nav-link,
+  .site-nav .nav-link::after {
+    transition: none !important;
+  }
+}

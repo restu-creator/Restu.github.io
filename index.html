@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>My Portfolio | Restu Wibisana Putra Lase</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+  />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS Kustom -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg fixed-top site-nav" id="siteNav">
+    <div class="container">
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="#home">Restu</a>
+
+      <!-- Tombol hamburger -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#karya">Karya</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#projek">Projek</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ================= HOME ================= -->
+  <section id="home" class="hero text-center">
+
+    <div class="hero-inner">
+
+      <!-- Foto profil -->
+      <div class="avatar-frame">
+        <img
+          src="img/restu.jpg"
+          alt="Restu"
+          class="avatar-img"
+        />
+      </div>
+
+      <!-- Nama -->
+      <h1 class="hero-name">Restu Wibisana Putra Lase</h1>
+
+      <!-- Subtitle -->
+      <p class="lead hero-tagline">Web Developer | Artist</p>
+
+    </div>
+
+    <!-- Wave -->
+    <svg
+      class="hero-divider"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 220"
+      preserveAspectRatio="none"
+    >
+      <path
+        fill="#ffffff"
+        d="M0,64L80,80C160,96,320,128,480,122.7C640,117,800,75,960,69.3C1120,64,1280,96,1360,112L1440,128L1440,220L1360,220C1280,220,1120,220,960,220C800,220,640,220,480,220C320,220,160,220,80,220L0,220Z"
+      ></path>
+    </svg>
+
+
+  </section>
+
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="about-section">
+
+    <div class="container">
+
+      <!-- Judul -->
+      <div class="row text-center mb-4">
+        <div class="col">
+          <h2 class="section-title">About Me</h2>
+        </div>
+      </div>
+
+      <!-- Kartu About -->
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="about-card">
+
+            <div class="about-card-text">
+              <p class="about-text">
+                Saya Restu, murid kelas 12 SMK Mandiri yang senang membangun website
+                dan menuangkan ide lewat gambar. Saat ini saya sedang berfokus
+                mengembangkan bakat menggambar saya sambil terus mengasah kemampuan
+                sebagai web developer.
+              </p>
+            </div>
+
+            <div class="about-card-facts">
+              <div class="about-fact">
+                <i class="bi bi-mortarboard"></i>
+                <div>
+                  <span class="about-fact-label">Sekolah</span>
+                  <span class="about-fact-value">SMK Mandiri</span>
+                </div>
+              </div>
+
+              <div class="about-fact">
+                <i class="bi bi-journal-bookmark"></i>
+                <div>
+                  <span class="about-fact-label">Kelas</span>
+                  <span class="about-fact-value">12</span>
+                </div>
+              </div>
+
+              <div class="about-fact">
+                <i class="bi bi-code-slash"></i>
+                <div>
+                  <span class="about-fact-label">Peran</span>
+                  <span class="about-fact-value">Web Developer</span>
+                </div>
+              </div>
+
+              <div class="about-fact">
+                <i class="bi bi-palette"></i>
+                <div>
+                  <span class="about-fact-label">Fokus</span>
+                  <span class="about-fact-value">Seni &amp; Ilustrasi</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= projek ================= -->
+  <section id="karya" class="karya-section">
+
+    <div class="container">
+
+      <!-- Judul -->
+      <div class="row text-center mb-4">
+        <div class="col">
+          <h2 class="section-title section-title-light">Karya</h2>
+          <p class="section-subtitle section-subtitle-light">Karya yang telah saya buat</p>
+        </div>
+      </div>
+
+      <!-- Cards -->
+      <div class="row g-4">
+
+        <!-- Card 1 -->
+        <div class="col-lg-4">
+          <div class="trophy-card">
+
+
+            <div class="trophy-card-media">
+              <img
+                src="img/karya/1.jpeg"
+                alt="Gambar1"
+              />
+            </div>
+
+            <div class="trophy-card-body">
+              <p class="trophy-card-text">
+                Vlad of Soara dari Manhwa The Stellar Swordmaster
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- Card 2 -->
+        <div class="col-lg-4">
+          <div class="trophy-card">
+
+
+            <div class="trophy-card-media">
+              <img
+                src="img/karya/2.jpeg"
+                alt="Gambar2 "
+              />
+            </div>
+
+            <div class="trophy-card-body">
+              <p class="trophy-card-text">
+                Mikey dan Izana dari Tokyo Revenger
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- Card 3 -->
+        <div class="col-lg-4">
+          <div class="trophy-card">
+
+
+            <div class="trophy-card-media">
+              <img
+                src="img/karya/3.jpeg"
+                alt="Gambar3"
+              />
+            </div>
+
+            <div class="trophy-card-body">
+              <p class="trophy-card-text">
+                The last Knight
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="projek" class="projek-section">
+
+    <div class="container">
+
+      <!-- Judul -->
+      <div class="row text-center mb-4">
+        <div class="col">
+          <h2 class="section-title">Projek</h2>
+          <p class="section-subtitle">Projek yang pernah saya buat</p>
+        </div>
+      </div>
+
+      <!-- Featured single project -->
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="projek-featured">
+
+            <div class="projek-featured-media">
+              <img
+                src="img/projects/1.jpeg"
+                alt="Website SIAKAD"
+              />
+              <span class="projek-featured-badge">Featured Project</span>
+            </div>
+
+            <div class="projek-featured-body">
+              <span class="projek-featured-eyebrow">01 / Web Developer</span>
+              <h3 class="projek-featured-title">Website SIAKAD</h3>
+              <p class="projek-featured-desc">
+                Projek terakhir yang saya buat adalah website Sistem Akademik (SIAKAD)
+                untuk mengelola kebutuhan administrasi sekolah secara online.
+              </p>
+
+              <ul class="projek-featured-list">
+                <li><i class="bi bi-check2-circle"></i> Pendaftaran &amp; Data Siswa</li>
+                <li><i class="bi bi-check2-circle"></i> KRS Online</li>
+                <li><i class="bi bi-check2-circle"></i> Jadwal &amp; Absensi</li>
+                <li><i class="bi bi-check2-circle"></i> Pengelolaan Nilai</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="contact-section">
+
+    <div class="container">
+
+      <!-- Judul -->
+      <div class="row text-center mb-4">
+        <div class="col">
+          <h2 class="section-title section-title-light">Contact</h2>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="row justify-content-center">
+        <div class="col-md-7">
+          <form class="contact-card">
+
+            <!-- Nama -->
+            <div class="mb-3 field-icon">
+              <label for="name" class="form-label">
+                Name
+              </label>
+
+              <div class="field-wrap">
+                <i class="bi bi-person"></i>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                />
+              </div>
+            </div>
+
+
+            <!-- Email -->
+            <div class="mb-3 field-icon">
+              <label for="email" class="form-label">
+                Email
+              </label>
+
+              <div class="field-wrap">
+                <i class="bi bi-envelope"></i>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                />
+              </div>
+            </div>
+
+
+            <!-- Pesan -->
+            <div class="mb-4 field-icon">
+              <label for="pesan" class="form-label">
+                Pesan
+              </label>
+
+              <div class="field-wrap field-wrap-textarea">
+                <i class="bi bi-chat-left-text"></i>
+                <textarea
+                  class="form-control"
+                  id="pesan"
+                  rows="3"
+                ></textarea>
+              </div>
+            </div>
+
+
+            <!-- Tombol -->
+            <button
+              type="submit"
+              class="btn btn-gold w-100"
+            >
+              Kirim
+            </button>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+  <!-- Interaksi kecil: navbar berubah saat discroll + highlight menu aktif -->
+  <script>
+    (function () {
+      var nav = document.getElementById('siteNav');
+      var onScroll = function () {
+        if (window.scrollY > 40) {
+          nav.classList.add('site-nav-scrolled');
+        } else {
+          nav.classList.remove('site-nav-scrolled');
+        }
+      };
+      document.addEventListener('scroll', onScroll);
+      onScroll();
+
+      var links = document.querySelectorAll('.nav-link');
+      var sections = Array.prototype.map.call(links, function (link) {
+        return document.querySelector(link.getAttribute('href'));
+      });
+
+      var setActive = function () {
+        var pos = window.scrollY + window.innerHeight * 0.35;
+        var current = 0;
+        sections.forEach(function (sec, i) {
+          if (sec && sec.offsetTop <= pos) {
+            current = i;
+          }
+        });
+        links.forEach(function (l) { l.classList.remove('active'); });
+        links[current].classList.add('active');
+      };
+      document.addEventListener('scroll', setActive);
+      setActive();
+    })();
+  </script>
+
+</body>
+
+</html>
